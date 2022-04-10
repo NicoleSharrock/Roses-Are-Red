@@ -1,30 +1,30 @@
 window.onload = function () {
-    if($('body').is('.ItinPageType')) {
-        
+    if ($('body').is('.ItinPageType')) {
+
         //Load active-itinerary, get the start date, set the buttons html to the start date
-        if(JSON.parse(localStorage.getItem('active-itinerary')) !== null) {
+        if (JSON.parse(localStorage.getItem('active-itinerary')) !== null) {
             //append dropdown button text
             updateDropDownBtn(JSON.parse(localStorage.getItem('active-itinerary')))
         }
 
         //load locally stored itineraries into buttons for the dropdown
-    var savedItineraries = JSON.parse(localStorage.getItem('savedItineraries'));
-    var savedItinerariesLength = Object.keys(savedItineraries).length;
+        var savedItineraries = JSON.parse(localStorage.getItem('savedItineraries'));
+        var savedItinerariesLength = Object.keys(savedItineraries).length;
 
-    // console.log(savedItineraries)
-    // console.log(savedItinerariesLength);
-    // console.log(Object.keys(savedItineraries));
+        // console.log(savedItineraries)
+        // console.log(savedItinerariesLength);
+        // console.log(Object.keys(savedItineraries));
 
-    //create and append the buttons
-    for (var i = 0; i < savedItinerariesLength; i++) {
-        $button = $(`<a class='dropdown-itin-btn' type='button'>${Object.keys(savedItineraries)[i]}</a>`);
-        $('#itinerary-dropdown').append($button);
-    }
+        //create and append the buttons
+        for (var i = 0; i < savedItinerariesLength; i++) {
+            $button = $(`<a class='dropdown-itin-btn' type='button'>${Object.keys(savedItineraries)[i]}</a>`);
+            $('#itinerary-dropdown').append($button);
+        }
 
-    $('.dropdown-itin-btn').on('click', loadThisItinerary);
+        $('.dropdown-itin-btn').on('click', loadThisItinerary);
 
-    $('body').on('click', '#activity-remove', removeFromItin);
-      
+        $('body').on('click', '#activity-remove', removeFromItin);
+
     }
 
 }
@@ -245,8 +245,8 @@ function removeFromItin() {
     var thisItin = JSON.parse(localStorage.getItem('active-itinerary'));
 
     //remove the selected activity in active itin
-    for(const property in thisItin){
-        if(thisItin[property].name == actitvityToDeleteName){
+    for (const property in thisItin) {
+        if (thisItin[property].name == actitvityToDeleteName) {
             console.log(thisItin[property])
             delete thisItin[property];
         }
@@ -263,7 +263,7 @@ function removeFromItin() {
     itinArr = Object.values(thisItin);
     console.log(itinArr)
     tempObj = {}
-    for (var i = 0; i < itinArr.length; i++){
+    for (var i = 0; i < itinArr.length; i++) {
         tempObj[`${i}`] = itinArr[i];
     }
     console.log(tempObj);
