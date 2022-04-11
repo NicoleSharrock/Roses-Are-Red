@@ -15,7 +15,7 @@ Selecting the "Get Started" button on the home screen page will redirect you to 
 > Note: Bug fixes and updates are currently in development.
 
 ## Website:
-Visit [Roses are Red](https://beimy.github.io/Roses-Are-Red/) today to begin planning your date!
+Visit [Roses are Red](https://nicolesharrock.github.io/Roses-Are-Red/) today to begin planning your date!
 
 ## Preview:
 ![screenrecording](./assets/images/roses_are_red.gif)
