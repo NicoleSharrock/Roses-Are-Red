@@ -73,7 +73,7 @@ function buildActivityObj(event_obj) {
             city: event_obj.city,
             location: { longitude: event_obj.longitude, latitude: event_obj.latitude },
             phoneNumber: event_obj.phone,
-            url: event_obj.url,
+            url: event_obj.website_url,
             brewType: event_obj.brewery_type,
             type: 'brewery',
             activityDate: JSON.parse(localStorage.getItem('currentSearchParams')).startDate
@@ -122,15 +122,15 @@ function buildActivityCard_Event(activity_Obj) {
     $address = $(`<h4 class="has-text-weight-bold has-text-white" id="activity-address">${activity_Obj.address}</h4>`);
     $link = $(`<a id="activity-link" type="button" class="m-1 has-text-dark-red has-text-weight-bold button is-light
                          is-small is-responsive" href="${activity_Obj.url}" target="_blank">TICKET LINK</a>`);
-    $remove = $(`<a id="activity-remove" type="button" class="m-1 has-text-dark-red has-text-weight-bold
-                         button is-light is-small is-responsive">REMOVE<span class="oi
-                         oi-trash has-text-dark-red m-2 has-background-white"></span></a>`);
+    // $remove = $(`<a id="activity-remove" type="button" class="m-1 has-text-dark-red has-text-weight-bold
+    //                      button is-light is-small is-responsive">REMOVE<span class="oi
+    //                      oi-trash has-text-dark-red m-2 has-background-white"></span></a>`);
     $col_sm_7.append($name);
     $col_sm_7.append($time);
     $col_sm_7.append($venue);
     $col_sm_7.append($address);
     $col_sm_7.append($link);
-    $col_sm_7.append($remove);
+    // $col_sm_7.append($remove);
     $card.append($col_sm_7);
 
     $('.activity-list').append($card);

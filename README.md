@@ -12,13 +12,13 @@ Selecting the "Get Started" button on the home screen page will redirect you to 
 
 - Clicking the "Itinerary Page" button located at the top right-hand corner of your screen will redirect you to a detailed outline of all of your added activities.
 
-> Note: Clicking the "Remove" button located on each activity card in your Itinerary Page will delete that specific activity from your itinerary list. The triangular danger icon on the right-hand corner of your screen will prompt you to select whether you want to delete the entire current activity for the selected date or range of dates. 
+> Note: Bug fixes and updates are currently in development.
 
 ## Website:
 Visit [Roses are Red](https://beimy.github.io/Roses-Are-Red/) today to begin planning your date!
 
 ## Preview:
-![screenrecording](Screencastify_gif_here)
+![screenrecording](./assets/images/roses_are_red.gif)
 
 ## Contributors:
 *[Aaron Rones](https://github.com/beimy), [Nicole Sharrock-Hayes](https://github.com/NicoleSharrock), and [Denysha Guerrios-Armaiz](https://github.com/denysha-abigail), 04/2022*
